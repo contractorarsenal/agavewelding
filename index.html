@@ -128,7 +128,7 @@
         }
         
         h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
-        h2 { font-size: clamp(2rem, 4.5vw, 3.5rem); }
+        h2 { font-size: clamp(2rem, 4.5vw, 3.5rem); color: var(--dark); }
         h3 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
         h4 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
         
@@ -151,10 +151,10 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(15, 20, 25, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(42, 101, 88, 0.3);
+            background: #F6E0AE;
+            border-bottom: 2px solid var(--primary);
             transition: transform 0.3s ease;
+            box-shadow: 0 2px 10px rgba(42, 101, 88, 0.1);
         }
         
         nav {
@@ -169,7 +169,7 @@
             align-items: center;
             gap: 1rem;
             text-decoration: none;
-            color: var(--light);
+            color: var(--dark);
         }
         
         .logo img {
@@ -182,6 +182,7 @@
             font-size: 1.5rem;
             font-weight: 700;
             letter-spacing: 0.02em;
+            color: var(--dark);
         }
         
         .nav-menu {
@@ -191,11 +192,17 @@
             align-items: center;
         }
         
+        .nav-cta {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
         .nav-menu a {
-            color: var(--light);
+            color: var(--dark);
             text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
+            font-weight: 600;
+            font-size: 1rem;
             transition: color 0.3s;
             position: relative;
         }
@@ -207,7 +214,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent-1);
+            background: var(--primary);
             transition: width 0.3s;
         }
         
@@ -216,7 +223,7 @@
         }
         
         .nav-menu a:hover {
-            color: var(--accent-1);
+            color: var(--primary);
         }
         
         .phone-link {
@@ -294,7 +301,7 @@
         .menu-toggle span {
             width: 30px;
             height: 3px;
-            background: var(--light);
+            background: var(--dark);
             transition: all 0.3s;
             border-radius: 3px;
         }
@@ -431,7 +438,7 @@
         
         /* Services Section - Page 2 */
         .services {
-            background: var(--dark-2);
+            background: var(--accent-4);
         }
         
         .section-header {
@@ -442,23 +449,23 @@
         .section-label {
             display: inline-block;
             padding: 0.5rem 1.5rem;
-            background: rgba(42, 101, 88, 0.2);
-            color: var(--accent-1);
+            background: var(--primary);
+            color: var(--light);
             font-size: 0.85rem;
             font-weight: 600;
             letter-spacing: 0.15em;
             text-transform: uppercase;
             margin-bottom: 1.5rem;
-            border: 1px solid var(--primary);
             border-radius: 30px;
         }
         
         .section-header h2 {
             margin-bottom: 1.5rem;
+            color: var(--dark);
         }
         
         .section-header p {
-            color: var(--gray-light);
+            color: var(--dark);
             font-size: 1.15rem;
             max-width: 700px;
             margin: 0 auto;
@@ -584,7 +591,7 @@
         
         /* Certifications Section - Page 3 */
         .certifications {
-            background: var(--dark);
+            background: var(--accent-4);
         }
         
         .cert-intro {
@@ -595,11 +602,12 @@
         
         .cert-intro h2 {
             margin-bottom: 1.5rem;
+            color: var(--dark);
         }
         
         .cert-intro p {
             font-size: 1.15rem;
-            color: var(--gray-light);
+            color: var(--dark);
             line-height: 1.9;
         }
         
@@ -971,12 +979,12 @@
                 left: -100%;
                 width: 100%;
                 height: calc(100vh - 80px);
-                background: var(--dark);
+                background: #F6E0AE;
                 flex-direction: column;
                 justify-content: flex-start;
                 padding: 3rem 2rem;
                 transition: left 0.3s;
-                border-top: 1px solid var(--dark-3);
+                border-top: 2px solid var(--primary);
             }
             
             .nav-menu.active {
@@ -1050,13 +1058,11 @@
             </div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#about">About Us</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li class="nav-cta">
-                    <a href="tel:4254461638" class="phone-link">📞 (425) 446-1638</a>
-                    <a href="#contact" class="btn">Get Free Quote</a>
+                    <a href="#contact" class="btn">GET FREE QUOTE</a>
                 </li>
             </ul>
         </nav>
@@ -1159,8 +1165,8 @@
         </div>
     </section>
 
-    <!-- PAGE 3: Certifications Section -->
-    <section class="certifications" id="certifications">
+    <!-- PAGE 3: Certifications Section (renamed to About Us) -->
+    <section class="certifications" id="about">
         <div class="container">
             <div class="cert-intro">
                 <span class="section-label">Credentials That Matter</span>
@@ -1239,7 +1245,7 @@
                     <div class="cert-content">
                         <h4 class="cert-title">OSHA 10-Hour Construction Industry Course</h4>
                         <p class="cert-org">CareerSafe / OSHA Authorized Training</p>
-                        <p class="cert-details">Comprehensive 10-hour OSHA construction safety training completed January 2022. Covers hazard recognition, fall protection, electrical safety, and more.</p>
+                        <p class="cert-details">Comprehensive 10-hour OSHA construction safety training completed January 2022. Covers hazardous work conditions, CPR certification, forklift operation, boom lift operation, fall protection, electrical safety, and construction site safety protocols. Demonstrates extensive training beyond welding-specific skills.</p>
                         <span class="cert-badge">OSHA Certified</span>
                     </div>
                 </div>
@@ -1331,7 +1337,7 @@
                         <span class="contact-icon">✉️</span>
                         <div>
                             <strong>Email</strong>
-                            <a href="/cdn-cgi/l/email-protection#2c6d4b4d5a495b49404845424b6c4b414d4540024f4341"><span class="__cf_email__" data-cfemail="3a7b5d5b4c5f4d5f565e53545d7a5d575b535614595557">[email&#160;protected]</span></a>
+                            <a href="mailto:Agavewelding@gmail.com">Agavewelding@gmail.com</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1401,8 +1407,7 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <a href="#home">Home</a>
-                    <a href="#services">Services</a>
-                    <a href="#certifications">Certifications</a>
+                    <a href="#about">About Us</a>
                     <a href="#portfolio">Portfolio</a>
                     <a href="#contact">Contact</a>
                 </div>
@@ -1418,7 +1423,7 @@
                     <h3>Connect</h3>
                     <a href="https://www.thumbtack.com/wa/everett/metal-fabricators/agave-welding-railings-llc/service/527321679018786828" target="_blank" rel="noopener">Thumbtack Profile</a>
                     <a href="tel:4254461638">Call: (425) 446-1638</a>
-                    <a href="/cdn-cgi/l/email-protection#e2a38583948795878e868b8c85a2858f838b8ecc818d8f">Email Us</a>
+                    <a href="mailto:Agavewelding@gmail.com">Email Us</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -1427,9 +1432,7 @@
         </div>
     </footer>
 
-
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Mobile menu toggle
         const menuToggle = document.getElementById('menuToggle');
         const navMenu = document.getElementById('navMenu');
@@ -1508,4 +1511,14 @@
                 return;
             }
             
-            if (currentS
+            if (currentScroll > lastScroll && currentScroll > 80) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
